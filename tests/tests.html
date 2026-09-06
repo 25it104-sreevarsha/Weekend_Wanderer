@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>ESCAPE — Test Suite</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 20px; color: #16332c; }
+  h1 { font-size: 20px; }
+  ul { padding-left: 0; list-style: none; }
+  li { padding: 6px 0; border-top: 1px solid #eee; font-size: 14px; }
+  li.pass { color: #1a7a4c; }
+  li.fail { color: #c23b22; font-weight: 600; }
+</style>
+</head>
+<body>
+  <h1>ESCAPE — Logic unit tests</h1>
+  <p>Covers search, filter, sort, the combined discovery pipeline, recommendation scoring, and HTML sanitization.</p>
+  <div id="results">Running…</div>
+  <script type="module" src="./tests.js"></script>
+</body>
+</html>
