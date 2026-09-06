@@ -14,7 +14,7 @@
   <nav class="nav" aria-label="Primary">
     <div class="wrap">
       <div class="brand"><span class="dot" aria-hidden="true">●</span>ESCAPE</div>
-      <button class="pill" id="favorites-pill" aria-haspopup="dialog" aria-controls="favorites-drawer">
+      <button type="button" class="pill" id="favorites-pill" aria-haspopup="dialog" aria-controls="favorites-drawer" aria-label="Open saved favorite destinations">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7.5-4.6-10-9.1C.4 8.5 2.2 4.8 6 4.4c2-.2 3.7.8 6 3 2.3-2.2 4-3.2 6-3 3.8.4 5.6 4.1 4 7.5C19.5 16.4 12 21 12 21z"/></svg>
         Favorites
         <span class="pill-count" id="fav-count">0</span>
@@ -27,7 +27,7 @@
       <p class="eyebrow">Two days off. One good decision.</p>
       <h1>Find, plan, and save<br>your next <em>weekend escape</em></h1>
       <p class="lede">Search and filter 15 real weekend destinations, get picks matched to your mood, and build a day-by-day plan — all saved as you go.</p>
-      <button class="btn-primary" id="hero-start-btn">Get recommendations</button>
+      <button type="button" class="btn-primary" id="hero-start-btn">Get recommendations</button>
     </div>
   </div>
 </header>
@@ -37,37 +37,37 @@
   <!-- FEATURE: Personalized Destination Recommendations -->
   <section id="recommend" class="section section-quiz" aria-labelledby="recommend-heading">
     <div class="wrap">
-      <h2 id="recommend-heading">Recommended for you</h2>
+      <h2 id="recommend-heading">Personalized weekend recommendations</h2>
       <p class="section-sub">Answer a few quick questions — this section is separate from the full destination list below.</p>
 
       <div class="quiz-groups">
         <fieldset class="quiz-group">
           <legend>Mood</legend>
           <div class="quiz-chip-row">
-            <button class="quiz-chip" data-group="vibe" data-value="chill">🌿 Chill</button>
-            <button class="quiz-chip" data-group="vibe" data-value="adventure">🥾 Adventure</button>
-            <button class="quiz-chip" data-group="vibe" data-value="culture">🏛️ Culture</button>
-            <button class="quiz-chip" data-group="vibe" data-value="nightlife">🌙 Nightlife</button>
+            <button type="button" class="quiz-chip" data-group="vibe" data-value="chill">🌿 Chill</button>
+            <button type="button" class="quiz-chip" data-group="vibe" data-value="adventure">🥾 Adventure</button>
+            <button type="button" class="quiz-chip" data-group="vibe" data-value="culture">🏛️ Culture</button>
+            <button type="button" class="quiz-chip" data-group="vibe" data-value="nightlife">🌙 Nightlife</button>
           </div>
         </fieldset>
         <fieldset class="quiz-group">
           <legend>Pace</legend>
           <div class="quiz-chip-row">
-            <button class="quiz-chip" data-group="pace" data-value="slow">☕ Slow</button>
-            <button class="quiz-chip" data-group="pace" data-value="balanced">🧭 Balanced</button>
-            <button class="quiz-chip" data-group="pace" data-value="packed">⚡ Packed</button>
+            <button type="button" class="quiz-chip" data-group="pace" data-value="slow">☕ Slow</button>
+            <button type="button" class="quiz-chip" data-group="pace" data-value="balanced">🧭 Balanced</button>
+            <button type="button" class="quiz-chip" data-group="pace" data-value="packed">⚡ Packed</button>
           </div>
         </fieldset>
         <fieldset class="quiz-group">
           <legend>Distance</legend>
           <div class="quiz-chip-row">
-            <button class="quiz-chip" data-group="distance" data-value="near">🚗 Under 4 hrs</button>
-            <button class="quiz-chip" data-group="distance" data-value="medium">🚆 4–10 hrs</button>
-            <button class="quiz-chip" data-group="distance" data-value="far">✈️ Worth a flight</button>
+            <button type="button" class="quiz-chip" data-group="distance" data-value="near">🚗 Under 4 hrs</button>
+            <button type="button" class="quiz-chip" data-group="distance" data-value="medium">🚆 4–10 hrs</button>
+            <button type="button" class="quiz-chip" data-group="distance" data-value="far">✈️ Worth a flight</button>
           </div>
         </fieldset>
       </div>
-      <button class="link-btn" id="quiz-reset">Reset answers</button>
+      <button type="button" class="link-btn" id="quiz-reset">Reset answers</button>
 
       <div id="recommendations-results">
         <p id="recommendations-prompt" class="section-sub">Answer at least one question above to see picks tailored to you.</p>
@@ -79,14 +79,14 @@
   <!-- FEATURE: Destination Discovery & Cards, Search, Filtering, Sorting -->
   <section id="discovery" class="section" aria-labelledby="discovery-heading">
     <div class="wrap">
-      <h2 id="discovery-heading">All destinations</h2>
+      <h2 id="discovery-heading">Discover weekend destinations</h2>
 
       <div class="discovery-controls">
         <div class="search-box" role="search">
           <label for="search-input" class="sr-only">Search destinations</label>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-          <input type="search" id="search-input" placeholder="Search by name or region…" autocomplete="off" />
-          <button id="search-clear" hidden aria-label="Clear search">&times;</button>
+          <input type="search" id="search-input" placeholder="Search by name or region…" autocomplete="off" aria-label="Search destinations by name or region" />
+          <button type="button" id="search-clear" hidden aria-label="Clear destination search">&times;</button>
         </div>
 
         <label class="sort-box">
@@ -102,8 +102,8 @@
       </div>
 
       <div class="discovery-layout">
-        <aside id="filter-panel" aria-label="Filter destinations">
-          <h3>Filters</h3>
+        <aside id="filter-panel" aria-labelledby="filters-heading">
+          <h3 id="filters-heading">Filter destinations</h3>
           <fieldset>
             <legend>Mood</legend>
             <label><input type="checkbox" data-group="vibe" value="chill" /> Chill</label>
@@ -128,7 +128,7 @@
         <div class="discovery-results">
           <div class="results-meta">
             <p id="result-count" aria-live="polite">15 destinations found</p>
-            <button id="clear-filters" hidden>Clear filters</button>
+            <button type="button" id="clear-filters" hidden aria-label="Clear all destination filters">Clear filters</button>
           </div>
           <div id="active-filter-chips" class="chip-row"></div>
           <div id="discovery-grid" class="grid"></div>
@@ -163,7 +163,7 @@
 <!-- Destination detail modal (FEATURE: Destination Details) -->
 <div class="modal-backdrop" id="detail-backdrop">
   <div class="modal" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-name">
-    <button class="modal-close" id="detail-close" aria-label="Close details">&times;</button>
+    <button type="button" class="modal-close" id="detail-close" aria-label="Close destination details">&times;</button>
     <div id="detail-gallery" class="detail-gallery"></div>
     <div class="modal-body">
       <div class="modal-region" id="detail-region"></div>
@@ -181,12 +181,12 @@
         <ul id="detail-highlights"></ul>
       </div>
       <div class="modal-actions">
-        <button class="btn-ghost" id="detail-favorite">
+        <button type="button" class="btn-ghost" id="detail-favorite" aria-label="Save destination for later">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7.5-4.6-10-9.1C.4 8.5 2.2 4.8 6 4.4c2-.2 3.7.8 6 3 2.3-2.2 4-3.2 6-3 3.8.4 5.6 4.1 4 7.5C19.5 16.4 12 21 12 21z"/></svg>
           <span>Save for later</span>
         </button>
-        <button class="btn-ghost" id="detail-add-day1">+ Add to Day 1</button>
-        <button class="btn-ghost" id="detail-add-day2">+ Add to Day 2</button>
+        <button type="button" class="btn-ghost" id="detail-add-day1" aria-label="Add destination to Day 1">+ Add to Day 1</button>
+        <button type="button" class="btn-ghost" id="detail-add-day2" aria-label="Add destination to Day 2">+ Add to Day 2</button>
       </div>
     </div>
   </div>
@@ -195,7 +195,7 @@
 <!-- Favorites drawer (FEATURE: Save / Favorite Destination) -->
 <div class="drawer-backdrop" id="favorites-backdrop"></div>
 <aside class="drawer" id="favorites-drawer" aria-label="Saved favorites">
-  <button class="drawer-close" id="favorites-close" aria-label="Close favorites">&times;</button>
+  <button type="button" class="drawer-close" id="favorites-close" aria-label="Close saved favorites">&times;</button>
   <h3>Favorites</h3>
   <p class="section-sub">Your shortlist for the weekend.</p>
   <div id="favorites-list"></div>
